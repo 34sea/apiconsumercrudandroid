@@ -14,7 +14,7 @@ class PostModelCreate: ViewModel() {
         private set
 
     fun sendPost() {
-        val newPost = Postdata(userId = 1, title = "Lsk Kotlin", body = "Conteúdo do post")
+        val newPost = Postdata(userId = 1, title = "dmlsa Kotlin", body = "Conteúdo do post")
 
         viewModelScope.launch {
             try {
