@@ -17,6 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.apiconsumercrudandroid.ui.theme.ApiconsumercrudandroidTheme
 import com.example.apiconsumercrudandroid.views.Consumer
 import com.example.apiconsumercrudandroid.views.PhotoConsumer
+import com.example.apiconsumercrudandroid.views.PostLfd
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
             ApiconsumercrudandroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "initial"){
+                    NavHost(navController = navController, startDestination = "PostLfd"){
                         composable(
                             route = "initial"
                         ) {
@@ -37,6 +38,12 @@ class MainActivity : ComponentActivity() {
                             route = "PhotoConsumer"
                         ) {
                             PhotoConsumer(innerPadding)
+                        }
+
+                        composable(
+                            route = "PostLfd"
+                        ) {
+                            PostLfd()
                         }
                     }
                 }
